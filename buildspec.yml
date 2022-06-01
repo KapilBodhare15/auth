@@ -10,7 +10,7 @@ phases:
     - aws --version
     - echo Manda@91688 | docker login --username kapilbodhare --password-stdin
     - TAG="$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
-    - IMAGE_URI=public.ecr.aws/p2e3u7x0/kb-repo:${TAG}
+    - IMAGE_URI=156962844638.dkr.ecr.us-west-2.amazonaws.com/kb-repo:${TAG}
   build:
     commands:
     - echo Build started on `date`
