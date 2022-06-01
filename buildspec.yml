@@ -8,6 +8,7 @@ phases:
     commands:
     - echo Logging in to Amazon ECR...
     - aws --version
+    - echo Manda@91688 | docker login --username kapilbodhare --password-stdin
     - TAG="$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
     - IMAGE_URI=public.ecr.aws/p2e3u7x0/kb-repo:${TAG}
   build:
